@@ -1,61 +1,110 @@
+
+// Colours
+$mainBlack: #000000;
+$mainWhite: #FFFFFF;
+$backgroundGrey: #FAFAFA;
+$headerColour: #000000;
+$bodyCopyColour: #686677;
+$headerFont: 'Work Sans', sans-serif;
+$bodyFont: 'Roboto', sans-serif;
+$contentCopyWidth: 1128px;
+
+// Buttons
+.button-blk {
+    font-family: $headerFont;
+    color: $mainWhite;
+    font-size: 16px;
+    background-color: $mainBlack;
+    padding: 15px 40px;
+    border: 1.5px rgba(255,255,255,.5) solid;
+    border-radius: 2px;
+    a {
+        text-decoration: none;
+    }
+    a:visited {
+        color: white;
+    }
+}
+
+
+/************************************************
+MAIN STYLING
+*************************************************/
+
 body {
     padding: 0;
     margin: 0;
-    
 }
 
-.navbar {
-    // CSS Grid system for the top navigation
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    align-items: center;
+.contentWrapper {
+    width: 90%;
+    margin: auto;
+}
 
-    // Testing purposes only
-    div {
-        background: #eee;
-        padding: 1em;
-    }
+.header {
+    height: 850px;
+    background-color: $mainBlack;
 
-    // Testing purposes only
-    div:nth-child(odd) {
-        background: #ddd;
-    }
+    .navbar {
+        // CSS Grid system for the top navigation
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        align-items: center;
+        padding-top: 60px;
 
-    // Styling the top navigation menu
-    .menu {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        text-align: center;
+        // Styling the top navigation menu
+        .menu {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-align: center;
 
-        li {
-            display: inline;
-            padding: 15px;
-            vertical-align: middle;
-            cursor: pointer;
+            li {
+                display: inline;
+                padding: 15px;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+
+            a {
+                text-decoration: none;
+                margin: 0 8px;
+                padding-bottom: 10px;
+                vertical-align: middle;
+                color: $mainWhite;
+                font-family: $headerFont;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            a:hover {
+                border-bottom: 1.5px white solid;
+                transition: 0.1s;
+            }
         }
-
-        a {
-            text-decoration: none;
-            color: black;
-            padding: 8px;
-            vertical-align: middle;
-        }
-    }
-    
-    .socialIcons {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        text-align: center;
-
-        li {
-            display: inline;
-            padding: 15px;
-            vertical-align: middle;
-            cursor: pointer;
-        }
+        .socialIcons {
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            
+                img {
+                    width: 22px;
+                    padding-left: 28px;
+                }
+            }
     }
 
+    .copyContainer {
+        width: $contentCopyWidth;
+        margin: auto;
+
+        .homepageHeader {
+            font-family: $headerFont;
+            color: $mainWhite;
+            font-weight: 500;
+            font-size: 60px;
+            padding-top: 16%;
+        }
+    }
 
 }

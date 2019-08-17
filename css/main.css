@@ -1,9 +1,40 @@
+.button-blk {
+  font-family: "Work Sans", sans-serif;
+  color: #FFFFFF;
+  font-size: 16px;
+  background-color: #000000;
+  padding: 15px 40px;
+  border: 1.5px rgba(255, 255, 255, 0.5) solid;
+  border-radius: 2px;
+}
+
+.button-blk a {
+  text-decoration: none;
+}
+
+.button-blk a:visited {
+  color: white;
+}
+
+/************************************************
+MAIN STYLING
+*************************************************/
 body {
   padding: 0;
   margin: 0;
 }
 
-.navbar {
+.contentWrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  height: 850px;
+  background-color: #000000;
+}
+
+.header .navbar {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 60% 20%;
@@ -11,49 +42,61 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 60px;
 }
 
-.navbar div {
-  background: #eee;
-  padding: 1em;
-}
-
-.navbar div:nth-child(odd) {
-  background: #ddd;
-}
-
-.navbar .menu {
+.header .navbar .menu {
   padding: 0;
   margin: 0;
   list-style-type: none;
   text-align: center;
 }
 
-.navbar .menu li {
+.header .navbar .menu li {
   display: inline;
   padding: 15px;
   vertical-align: middle;
   cursor: pointer;
 }
 
-.navbar .menu a {
+.header .navbar .menu a {
   text-decoration: none;
-  color: black;
-  padding: 8px;
+  margin: 0 8px;
+  padding-bottom: 10px;
   vertical-align: middle;
+  color: #FFFFFF;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.navbar .socialIcons {
+.header .navbar .menu a:hover {
+  border-bottom: 1.5px white solid;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.header .navbar .socialIcons {
   padding: 0;
   margin: 0;
-  list-style-type: none;
-  text-align: center;
+  text-align: right;
 }
 
-.navbar .socialIcons li {
-  display: inline;
-  padding: 15px;
-  vertical-align: middle;
-  cursor: pointer;
+.header .navbar .socialIcons img {
+  width: 22px;
+  padding-left: 28px;
+}
+
+.header .copyContainer {
+  width: 1128px;
+  margin: auto;
+}
+
+.header .copyContainer .homepageHeader {
+  font-family: "Work Sans", sans-serif;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 60px;
+  padding-top: 16%;
 }
 /*# sourceMappingURL=main.css.map */
