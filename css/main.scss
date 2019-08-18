@@ -7,9 +7,73 @@ $headerColour: #000000;
 $bodyCopyColour: #686677;
 $headerFont: 'Work Sans', sans-serif;
 $bodyFont: 'Roboto', sans-serif;
-$contentCopyWidth: 1128px;
 
-// Buttons
+////////////////////////////////// Desktop Styling
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.outerContainer {
+    padding: 0 80px;
+    max-width: 1712px;
+    margin: auto;
+}
+
+////// Typography
+
+h1 {
+    font-family: $headerFont;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: $headerFont;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: $headerFont;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: $headerFont;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h5 {
+    font-family: $headerFont;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h6 {
+    font-family: $headerFont;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p {
+    font-family: $bodyFont;
+    font-size: 16px;
+    font-weight: 400;
+    color: $bodyCopyColour;
+}
+
+.bodyHeader {
+    font-family: $bodyFont;
+    font-size: 20px;
+    font-weight: 400;
+    color: $bodyCopyColour;
+}
+
+////// Buttons
 .button-blk {
     font-family: $headerFont;
     color: $mainWhite;
@@ -18,28 +82,35 @@ $contentCopyWidth: 1128px;
     padding: 15px 40px;
     border: 1.5px rgba(255,255,255,.5) solid;
     border-radius: 2px;
-    a {
-        text-decoration: none;
-    }
-    a:visited {
-        color: white;
-    }
+    cursor: pointer;
+    transition: 0.1s;
 }
 
-
-/************************************************
-MAIN STYLING
-*************************************************/
-
-body {
-    padding: 0;
-    margin: 0;
+.button-blk:hover {
+    background-color: white;
+    color: black;
+    transition: 0.1s;
 }
 
-.contentWrapper {
-    width: 90%;
-    margin: auto;
+.button-wht {
+    font-family: $headerFont;
+    color: $mainBlack;
+    font-size: 16px;
+    background-color: $mainWhite;
+    padding: 15px 40px;
+    border: 1.5px rgba(255,255,255,.5) solid;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.1s;
 }
+
+.button-wht:hover {
+    background-color: black;
+    color: white;
+    transition: 0.1s;
+}
+
+////// Homepage header styling
 
 .header {
     height: 850px;
@@ -82,6 +153,7 @@ body {
                 transition: 0.1s;
             }
         }
+        // Top nav social icons 
         .socialIcons {
             padding: 0;
             margin: 0;
@@ -94,17 +166,29 @@ body {
             }
     }
 
-    .copyContainer {
-        width: $contentCopyWidth;
+
+    .innerContainer {
+        max-width: 1128px;
         margin: auto;
 
-        .homepageHeader {
-            font-family: $headerFont;
+        .homepageHeaderWhite {
             color: $mainWhite;
-            font-weight: 500;
-            font-size: 60px;
-            padding-top: 16%;
+            padding-top: 200px;
         }
     }
-
 }
+
+////// Homepage Portfolio
+.portfolioHero {
+    width: 100%;
+    height: 1080px;
+    background-image: url("../assets/heroportfolioimage1.jpg");
+    background-size: cover;
+    background-position: 50%;
+
+    .caseStudyCopy {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
