@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -165,5 +170,79 @@ p {
 .header .outerContainer .innerContainer .homepageHeaderWhite {
   color: #FFFFFF;
   padding-top: 200px;
+  padding-bottom: 50px;
+}
+
+.portfolio-1 {
+  height: 1080px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../assets/homepageportfolio-large.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.portfolioCopyWrapperLarge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 80px 80px;
+  color: white;
+}
+
+.portfolioCopyWrapperLarge h2 {
+  padding-top: 20px;
+}
+
+.portfolio-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.portfolio-2 .portfolioImage-1 {
+  height: 640px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.portfolio-2 .portfolioImage-1 .portfolioCopyWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 80px 80px;
+  color: white;
+}
+
+.portfolio-2 .portfolioImage-1 .portfolioCopyWrapper h3 {
+  padding-top: 20px;
+}
+
+.portfolio-2 .portfolioImage-2 {
+  height: 640px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.portfolio-2 .portfolioImage-2 .portfolioCopyWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 80px 80px;
+  color: white;
+}
+
+.portfolio-2 .portfolioImage-2 .portfolioCopyWrapper h3 {
+  padding-top: 20px;
 }
 /*# sourceMappingURL=main.css.map */

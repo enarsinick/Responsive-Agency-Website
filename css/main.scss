@@ -9,6 +9,10 @@ $headerFont: 'Work Sans', sans-serif;
 $bodyFont: 'Roboto', sans-serif;
 
 ////////////////////////////////// Desktop Styling
+* {
+    padding: 0;
+    margin: 0;
+}
 
 body {
     padding: 0;
@@ -175,6 +179,76 @@ p {
     .outerContainer .innerContainer .homepageHeaderWhite {
         color: $mainWhite;
         padding-top: 200px;
+        padding-bottom: 50px;
         }
     }
 
+////// Homepage portfolio
+
+.portfolio-1 {
+    height: 1080px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.portfolioCopyWrapperLarge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 80px 80px;
+    color: white;
+
+    h2 {
+        padding-top: 20px;
+    }
+}
+
+.portfolio-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .portfolioImage-1 {
+        height: 640px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.50)), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        .portfolioCopyWrapper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 0 80px 80px;
+            color: white;
+            
+            h3 {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .portfolioImage-2 {
+        height: 640px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.50)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        
+        .portfolioCopyWrapper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 0 80px 80px;
+            color: white;
+
+            h3 {
+                padding-top: 20px;
+            }
+        }
+    }
+}
