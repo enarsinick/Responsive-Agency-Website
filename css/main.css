@@ -114,6 +114,10 @@ p {
   background-color: #000000;
 }
 
+.header .mobileNavigation {
+  display: none;
+}
+
 .header .navigation {
   display: -ms-grid;
   display: grid;
@@ -244,5 +248,94 @@ p {
 
 .portfolio-2 .portfolioImage-2 .portfolioCopyWrapper h3 {
   padding-top: 20px;
+}
+
+@media (max-width: 1440px) {
+  .header {
+    background-color: orange;
+  }
+  .portfolio-1 .portfolioCopyWrapperLarge {
+    padding: 0 0 60px 60px;
+  }
+  .portfolio-2 .portfolioImage-1 .portfolioCopyWrapper,
+  .portfolio-2 .portfolioImage-2 .portfolioCopyWrapper {
+    padding: 0 0 60px 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    background-color: blue;
+  }
+  .header .navigation .menu li {
+    padding: 0;
+  }
+  .header .navigation .socialIcons img {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-color: red;
+  }
+  .header .navigation {
+    display: none;
+  }
+  .header .mobileNavigation {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .mobileNavigation .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    padding-top: 60px;
+  }
+  .header .mobileNavigation .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Work Sans", sans-serif;
+    color: #FFFFFF;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .header .mobileNavigation .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .header .mobileNavigation .sidenav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+  }
+  .header .mobileNavigation .menuIcon {
+    text-align: right;
+  }
+  .header .mobileNavigation .menuIcon img {
+    width: 30px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    background-color: green;
+  }
 }
 /*# sourceMappingURL=main.css.map */

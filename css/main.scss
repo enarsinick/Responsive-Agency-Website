@@ -126,6 +126,10 @@ p {
     height: 850px;
     background-color: $mainBlack;
 
+    .mobileNavigation {
+        display: none;
+    }
+
     .navigation {
         // CSS Grid system for the top navigation
         display: grid;
@@ -177,11 +181,11 @@ p {
     }
 
     .outerContainer .innerContainer .homepageHeaderWhite {
-        color: $mainWhite;
-        padding-top: 200px;
-        padding-bottom: 50px;
-        }
+    color: $mainWhite;
+    padding-top: 200px;
+    padding-bottom: 50px;
     }
+}
 
 ////// Homepage portfolio
 
@@ -250,5 +254,124 @@ p {
                 padding-top: 20px;
             }
         }
+    }
+}
+
+
+////////////////////////////////// Laptop Large Styling
+
+@media (max-width: 1440px) { 
+    .header {
+        background-color: orange;
+    }
+
+    ////// Homepage portfolio
+
+    .portfolio-1 .portfolioCopyWrapperLarge {
+        padding: 0 0 60px 60px;
+    }
+
+    .portfolio-2 .portfolioImage-1 .portfolioCopyWrapper, 
+    .portfolio-2 .portfolioImage-2 .portfolioCopyWrapper {
+        padding: 0 0 60px 60px;
+    }
+
+}
+
+
+////////////////////////////////// Laptop Styling
+
+@media (max-width: 1024px) { 
+    .header {
+        background-color: blue;
+    }
+
+    .header .navigation {
+        .menu li {
+            padding: 0;
+        }
+        
+        .socialIcons img {
+            padding-left: 15px;
+        }
+    }
+
+}
+
+
+
+////////////////////////////////// Tablet Styling
+
+@media (max-width: 768px) { 
+    .header {
+        background-color: red;
+
+        .navigation {
+            display: none;
+        }
+
+        .mobileNavigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 60px;
+            align-items: center;
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: $mainBlack;
+                overflow-x: hidden;
+                transition: 0.4s;
+                padding-top: 60px;
+              }
+              
+              .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                font-family: $headerFont;
+                color: $mainWhite;
+                display: block;
+                transition: 0.3s;
+              }
+              
+              .sidenav a:hover {
+                color: #f1f1f1;
+              }
+              
+              .sidenav .closebtn {
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 36px;
+              }
+
+              .menuIcon {
+                  text-align: right;
+
+                  img {
+                    width: 30px;
+                    cursor: pointer;
+                  }
+              }
+        }
+        
+    }
+
+
+}
+
+
+
+
+////////////////////////////////// Mobile Styling
+
+@media (max-width: 320px) { 
+    .header {
+        background-color: green;
     }
 }
