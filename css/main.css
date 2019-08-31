@@ -54,6 +54,7 @@ h6 {
   color: #686677;
   font-size: 20px;
   font-weight: 400;
+  line-height: 28px;
 }
 
 p {
@@ -84,7 +85,7 @@ p {
   color: #FFFFFF;
   font-size: 16px;
   background-color: #000000;
-  padding: 15px 40px;
+  padding: 20px 40px;
   border: 1.5px rgba(255, 255, 255, 0.5) solid;
   border-radius: 2px;
   cursor: pointer;
@@ -104,8 +105,8 @@ p {
   color: #000000;
   font-size: 16px;
   background-color: #FFFFFF;
-  padding: 15px 40px;
-  border: 1.5px rgba(255, 255, 255, 0.5) solid;
+  padding: 20px 40px;
+  border: 1.5px rgba(0, 0, 0, 0.2) solid;
   border-radius: 2px;
   cursor: pointer;
   -webkit-transition: 0.1s;
@@ -124,7 +125,7 @@ p {
   color: #000000;
   font-size: 16px;
   background-color: #FAFAFA;
-  padding: 15px 40px;
+  padding: 20px 40px;
   border: 1.5px rgba(0, 0, 0, 0.2) solid;
   border-radius: 2px;
   cursor: pointer;
@@ -137,6 +138,46 @@ p {
   color: white;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+}
+
+.footerCTASection {
+  height: 640px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.footerCTA {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footerCTA a {
+  color: white;
+  text-decoration: none;
+}
+
+.ourWorkCTA {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");
+}
+
+.theStudioCTA {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../assets/room-3m9132_mMSQ-unsplash.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/room-3m9132_mMSQ-unsplash.jpg");
 }
 
 .header {
@@ -330,6 +371,108 @@ p {
 
 .ourCapabilities .innerContainer .capabilitiesList div .header-12 {
   margin-bottom: 25px;
+}
+
+.ourCustomers {
+  height: 100vh;
+  width: 100%;
+}
+
+.ourCustomers .innerContainer {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ourCustomers .innerContainer .ourCustomersIntro {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  margin-bottom: 150px;
+}
+
+.ourCustomers .innerContainer .ourCustomersIntro .buttonWrapper {
+  text-align: right;
+}
+
+.ourCustomers .innerContainer .logoWall .logoStrip {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-row-gap: 100px;
+}
+
+.ourCustomers .innerContainer .logoWall .logoStrip img {
+  opacity: 0.5;
+  width: 130px;
+  display: block;
+  margin: auto;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.ourCustomers .innerContainer .logoWall .logoStrip img:hover {
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.latestJournalPosts {
+  background-color: #FAFAFA;
+  height: 1000px;
+  width: 100%;
+}
+
+.latestJournalPosts .innerContainer {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.latestJournalPosts .innerContainer .latestJournalPostsIntro {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-bottom: 80px;
+}
+
+.latestJournalPosts .innerContainer .latestJournalPostsIntro h4 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.latestJournalPosts .innerContainer .latestJournalPostsIntro .buttonWrapper {
+  text-align: right;
+}
+
+.latestJournalPosts .innerContainer .journalPosts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+}
+
+.latestJournalPosts .innerContainer .journalPosts div img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.latestJournalPosts .innerContainer .journalPosts div h4 {
+  margin-bottom: 16px;
+}
+
+.latestJournalPosts .innerContainer .journalPosts div h6 {
+  padding-right: 50px;
 }
 
 @media (max-width: 1440px) {

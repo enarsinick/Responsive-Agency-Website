@@ -8,7 +8,7 @@ $bodyCopyColour: #686677;
 $headerFont: 'Work Sans', sans-serif;
 $bodyFont: 'Roboto', sans-serif;
 
-////////////////////////////////// Desktop Styling
+////////////////////////////////// Universal Styling
 * {
     padding: 0;
     margin: 0;
@@ -68,6 +68,7 @@ h6 {
     color: $bodyCopyColour;
     font-size: 20px;
     font-weight: 400;
+    line-height: 28px;
 }
 
 p {
@@ -99,7 +100,7 @@ p {
     color: $mainWhite;
     font-size: 16px;
     background-color: $mainBlack;
-    padding: 15px 40px;
+    padding: 20px 40px;
     border: 1.5px rgba(255,255,255,.5) solid;
     border-radius: 2px;
     cursor: pointer;
@@ -117,8 +118,8 @@ p {
     color: $mainBlack;
     font-size: 16px;
     background-color: $mainWhite;
-    padding: 15px 40px;
-    border: 1.5px rgba(255,255,255,.5) solid;
+    padding: 20px 40px;
+    border: 1.5px rgba(0,0,0,.2) solid;
     border-radius: 2px;
     cursor: pointer;
     transition: 0.1s;
@@ -135,7 +136,7 @@ p {
     color: $mainBlack;
     font-size: 16px;
     background-color: $backgroundGrey;
-    padding: 15px 40px;
+    padding: 20px 40px;
     border: 1.5px rgba(0,0,0,.2) solid;
     border-radius: 2px;
     cursor: pointer;
@@ -147,6 +148,47 @@ p {
     color: white;
     transition: 0.1s;
 }
+
+/////// Footer 
+
+// CTA 
+
+.footerCTASection {
+    height: 640px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footerCTA {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.ourWorkCTA {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");
+}
+
+.theStudioCTA {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/room-3m9132_mMSQ-unsplash.jpg");
+}
+
+
+
+
+
+//////////////////////////////////////////// HOMEPAGE ///////////////////////////////////////
 
 ////// Homepage header styling
 
@@ -335,6 +377,107 @@ p {
         }
     }
 }
+
+////// Our Customers
+
+.ourCustomers {
+    height: 100vh;
+    width: 100%;
+
+    .innerContainer {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        .ourCustomersIntro {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            margin-bottom: 150px;
+
+            .buttonWrapper {
+                text-align: right;
+            }
+        }
+
+        .logoWall .logoStrip {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 100px;
+
+            img {
+                opacity: 0.5;
+                width: 130px;
+                display: block;
+                margin: auto;
+                transition: 0.2s;
+            }
+
+            img:hover {
+                opacity: 1;
+                transition: 0.2s;
+            }
+
+        }
+    }
+}
+
+////// Latest Journal Posts
+
+.latestJournalPosts {
+    background-color: $backgroundGrey;
+    height: 1000px;
+    width: 100%;
+
+    .innerContainer {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        .latestJournalPostsIntro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 80px;
+            
+            h4 {
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+
+            .buttonWrapper {
+                text-align: right;
+            }
+        }
+
+        .journalPosts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 40px;
+
+            div img {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            div h4 {
+                margin-bottom: 16px;
+            }
+
+            div h6 {
+                padding-right: 50px;
+            }
+        }
+    }
+}
+
+
 
 
 ////////////////////////////////// Laptop Large Styling
