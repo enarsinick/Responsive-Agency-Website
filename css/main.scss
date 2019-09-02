@@ -158,23 +158,26 @@ p {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
 
-.footerCTA {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    a {
-        color: white;
-        text-decoration: none;
+    .footerCTA {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
     }
 }
+
 
 .ourWorkCTA {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");

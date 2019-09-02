@@ -149,7 +149,9 @@ p {
       grid-template-columns: 1fr 1fr;
 }
 
-.footerCTA {
+.footerCTASection .footerCTA {
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -165,7 +167,7 @@ p {
           justify-content: center;
 }
 
-.footerCTA a {
+.footerCTASection .footerCTA a {
   color: white;
   text-decoration: none;
 }
