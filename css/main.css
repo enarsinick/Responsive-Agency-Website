@@ -172,6 +172,56 @@ p {
   text-decoration: none;
 }
 
+footer {
+  background-color: #000000;
+  height: 822px;
+  width: 100%;
+}
+
+footer .innerContainer {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+footer .innerContainer .footerHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  margin-bottom: 170px;
+}
+
+footer .innerContainer .footerHeader h4 {
+  color: white;
+  font-weight: 400;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+footer .innerContainer .footerHeader .buttonWrapper {
+  text-align: right;
+}
+
+footer .innerContainer .mainFooter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 25% 25% 20%;
+      grid-template-columns: 40% 25% 25% 20%;
+}
+
+footer .innerContainer .mainFooter .header-12 {
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+footer .innerContainer .mainFooter p {
+  line-height: 27px;
+}
+
 .ourWorkCTA {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");
