@@ -31,7 +31,7 @@ body {
 }
 
 
-////// Typography
+///////////// Typography
 
 h1 {
     font-family: $headerFont;
@@ -94,7 +94,7 @@ p {
     letter-spacing: 1.5px;
 }
 
-////// Buttons
+/////////////// Buttons
 .button-blk {
     font-family: $headerFont;
     color: $mainWhite;
@@ -149,7 +149,7 @@ p {
     transition: 0.1s;
 }
 
-/////// Footer 
+////////////// Footer 
 
 // CTA 
 
@@ -213,7 +213,8 @@ footer {
 
         .mainFooter {
             display: grid;
-            grid-template-columns: 40% 25% 25% 20%;
+            // grid-template-columns: 40% 25% 25% 20%;
+            grid-template-columns: 3fr 2fr 2fr 1fr;
 
             .header-12 {
                 color: $mainWhite;
@@ -223,10 +224,26 @@ footer {
             p {
                 line-height: 27px;
             }
+
+            div ul {
+                list-style-type: none;
+                color: $bodyCopyColour;
+                font-family: $bodyFont;
+                line-height: 27px;
+            }
+
+            .footerLink {
+                text-decoration: underline;
+                color: $bodyCopyColour;
+            }
+            
+            .footerLink:hover {
+                color: white;
+
+            }
         }
     }
 }
-
 
 .ourWorkCTA {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");
@@ -306,6 +323,7 @@ footer {
     color: $mainWhite;
     padding-top: 200px;
     padding-bottom: 50px;
+    
     }
 }
 
@@ -395,40 +413,39 @@ footer {
     width: 100%;
     background-color: $backgroundGrey;
 
-    .innerContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 40px;
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-
-        div h2 {
-            margin-bottom: 50px;
-        }
-        
-        div h6 {
-            margin-bottom: 80px;
-            padding-right: 40px;
-        }
-
-        .capabilitiesList {
+        .innerContainer {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-column-gap: 40px;
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 
-            div {
+            div h2 {
+                margin-bottom: 50px;
+            }
+            
+            div h6 {
                 margin-bottom: 80px;
+                padding-right: 40px;
+            }
 
-                .header-12 {
-                    margin-bottom: 25px;
+            .capabilitiesList {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 40px;
+
+                div {
+                    margin-bottom: 80px;
+
+                    .header-12 {
+                        margin-bottom: 25px;
+                    }
                 }
             }
         }
     }
-}
 
 ////// Our Customers
 

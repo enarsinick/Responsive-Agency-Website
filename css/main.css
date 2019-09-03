@@ -209,8 +209,8 @@ footer .innerContainer .footerHeader .buttonWrapper {
 footer .innerContainer .mainFooter {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 25% 25% 20%;
-      grid-template-columns: 40% 25% 25% 20%;
+  -ms-grid-columns: 3fr 2fr 2fr 1fr;
+      grid-template-columns: 3fr 2fr 2fr 1fr;
 }
 
 footer .innerContainer .mainFooter .header-12 {
@@ -220,6 +220,22 @@ footer .innerContainer .mainFooter .header-12 {
 
 footer .innerContainer .mainFooter p {
   line-height: 27px;
+}
+
+footer .innerContainer .mainFooter div ul {
+  list-style-type: none;
+  color: #686677;
+  font-family: "Roboto", sans-serif;
+  line-height: 27px;
+}
+
+footer .innerContainer .mainFooter .footerLink {
+  text-decoration: underline;
+  color: #686677;
+}
+
+footer .innerContainer .mainFooter .footerLink:hover {
+  color: white;
 }
 
 .ourWorkCTA {
@@ -393,7 +409,6 @@ footer .innerContainer .mainFooter p {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-column-gap: 40px;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
