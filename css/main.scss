@@ -193,7 +193,7 @@ footer {
 
         .footerHeader {
             display: grid;
-            grid-template-columns: 70% 30%;
+            grid-template-columns: 4fr 1fr;;
             margin-bottom: 170px;
             
             h4 {
@@ -410,12 +410,12 @@ footer {
 
 .ourCapabilities {
     height: 800px;
-    width: 100%;
     background-color: $backgroundGrey;
 
         .innerContainer {
+            width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 50% 50%;
             position: relative;
             top: 50%;
             -webkit-transform: translateY(-50%);
@@ -428,7 +428,7 @@ footer {
             
             div h6 {
                 margin-bottom: 80px;
-                padding-right: 40px;
+                padding-right: 60px;
             }
 
             .capabilitiesList {
@@ -438,6 +438,7 @@ footer {
 
                 div {
                     margin-bottom: 80px;
+                    // padding-right: 40px;
 
                     .header-12 {
                         margin-bottom: 25px;
@@ -462,7 +463,7 @@ footer {
 
         .ourCustomersIntro {
             display: grid;
-            grid-template-columns: 80% 20%;
+            grid-template-columns: 4fr 1fr;
             margin-bottom: 150px;
 
             .buttonWrapper {
@@ -552,9 +553,6 @@ footer {
 ////////////////////////////////// Laptop Large Styling
 
 @media (max-width: 1440px) { 
-    .header {
-        background-color: orange;
-    }
 
     ////// Homepage portfolio
 
@@ -573,9 +571,6 @@ footer {
 ////////////////////////////////// Laptop Styling
 
 @media (max-width: 1024px) { 
-    .header {
-        background-color: blue;
-    }
 
     .header .navigation {
         .menu li {
@@ -593,9 +588,13 @@ footer {
 
 ////////////////////////////////// Tablet Styling
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
+
+    .outerContainer {
+        padding: 0 40px;
+    }
+
     .header {
-        background-color: red;
 
         .navigation {
             display: none;
@@ -604,7 +603,7 @@ footer {
         .mobileNavigation {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            padding-top: 60px;
+            padding-top: 40px;
             align-items: center;
 
             .sidenav {
@@ -650,19 +649,210 @@ footer {
                   }
               }
         }
+
+        .homepageHeaderWhite {
+            font-size: 50px;
+        }
         
     }
 
+    //// Portfolio Homepage
+    .portfolio-1 {
+        height: 512px;
 
+        .portfolioCopyWrapperLarge {
+            padding: 0 0 50px 40px;
+
+            h6 {
+                font-size: 16px;
+            }
+
+                h2 {
+                font-size: 25px;
+                padding-top: 5px;
+            }
+        }
+    }
+
+    .portfolio-2 .portfolioImage-1, 
+    .portfolio-2 .portfolioImage-2 {
+        height: 257px;
+
+        .portfolioCopyWrapper {
+            padding: 0 0 40px 40px;
+
+            h6 {
+                font-size: 16px;
+            }
+
+            h3 {
+                font-size: 25px;
+                padding-top: 5px;
+            }
+        }
+    }
+
+    //// Our Capabilities
+    .ourCapabilities {
+        padding: 0 40px;
+        height: 973px;
+
+        .innerContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .capabilitiesIntro{
+                margin-bottom: 80px;
+            }
+
+            div h2 {
+                margin-bottom: 30px;
+                font-size: 40px;
+                padding-right: 50%;
+            }
+
+            div h6 {
+                margin-bottom: 50px;
+                padding-right: 30%;
+            }
+            
+
+            .capabilitiesList {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 40px;
+
+                div {
+                    margin-bottom: 0;
+
+                    .header-12 {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            .capabilitiesList:first-child {
+                div {
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    // .ourCapabilities {
+    //     height: 800px;
+    //     background-color: $backgroundGrey;
+    
+    //         .innerContainer {
+    //             width: 100%;
+    //             display: grid;
+    //             grid-template-columns: 50% 50%;
+    //             position: relative;
+    //             top: 50%;
+    //             -webkit-transform: translateY(-50%);
+    //             -ms-transform: translateY(-50%);
+    //             transform: translateY(-50%);
+                
+    //             div h6 {
+    //                 margin-bottom: 80px;
+    //                 padding-right: 40px;
+    //             }
+    
+    //             .capabilitiesList {
+    //                 display: grid;
+    //                 grid-template-columns: 1fr 1fr;
+    //                 grid-column-gap: 40px;
+    
+    //                 div {
+    //                     margin-bottom: 80px;
+    //                     padding-right: 40px;
+    
+    //                     .header-12 {
+    //                         margin-bottom: 25px;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    ///// Our Customers 
+    .ourCustomers {
+        height: 100vh;
+        width: 100%;
+    
+        .innerContainer {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+            .ourCustomersIntro {
+                display: grid;
+                grid-template-columns: 4fr 1fr;
+                margin-bottom: 150px;
+    
+                .buttonWrapper {
+                    text-align: right;
+                }
+            }
+    
+            .logoWall .logoStrip {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-row-gap: 100px;
+    
+                img {
+                    opacity: 0.5;
+                    width: 130px;
+                    display: block;
+                    margin: auto;
+                    transition: 0.2s;
+                }
+    
+                img:hover {
+                    opacity: 1;
+                    transition: 0.2s;
+                }
+    
+            }
+        }
+    }
 }
 
 
 
 
-////////////////////////////////// Mobile Styling
+////////////////////////////////// Mobile L Styling
+
+@media (max-width: 425px) { 
+
+    .header {
+        height: 568px;
+    
+        .outerContainer .innerContainer .homepageHeaderWhite {
+            color: $mainWhite;
+            padding-top: 140px;
+            padding-bottom: 50px;
+            font-size: 36px;
+            
+            }
+    }
+
+}
+
+////////////////////////////////// Mobile S Styling
 
 @media (max-width: 320px) { 
-    .header {
-        background-color: green;
-    }
+    
+    .outerContainer .innerContainer .homepageHeaderWhite {
+        color: $mainWhite;
+        padding-top: 140px;
+        padding-bottom: 50px;
+        font-size: 25px;
+        
+        }
+
 }
