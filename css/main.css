@@ -175,7 +175,6 @@ p {
 footer {
   background-color: #000000;
   height: 822px;
-  width: 100%;
 }
 
 footer .innerContainer {
@@ -442,7 +441,6 @@ footer .innerContainer .mainFooter .footerLink:hover {
 
 .ourCustomers {
   height: 100vh;
-  width: 100%;
 }
 
 .ourCustomers .innerContainer {
@@ -492,7 +490,6 @@ footer .innerContainer .mainFooter .footerLink:hover {
 .latestJournalPosts {
   background-color: #FAFAFA;
   height: 1000px;
-  width: 100%;
 }
 
 .latestJournalPosts .innerContainer {
@@ -562,6 +559,9 @@ footer .innerContainer .mainFooter .footerLink:hover {
 }
 
 @media (max-width: 768px) {
+  .button-blk, .button-wht, .button-grey {
+    padding: 15px 30px;
+  }
   .outerContainer {
     padding: 0 40px;
   }
@@ -585,30 +585,34 @@ footer .innerContainer .mainFooter .footerLink:hover {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #000000;
+    background-color: #5B41DD;
     overflow-x: hidden;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    padding-top: 60px;
+    padding-top: 100px;
   }
   .header .mobileNavigation .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 20px 40px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 50px;
     font-family: "Work Sans", sans-serif;
     color: #FFFFFF;
     display: block;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .header .mobileNavigation .sidenav a:hover {
-    color: #f1f1f1;
-  }
   .header .mobileNavigation .sidenav .closebtn {
     position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 36px;
+    top: 30px;
+    right: 40px;
+    font-size: 50px;
+  }
+  .header .mobileNavigation .sidenav .socialIcons-responsive a {
+    display: inline-block;
+    padding-left: 40px;
+  }
+  .header .mobileNavigation .sidenav .socialIcons-responsive a img {
+    width: 30px;
   }
   .header .mobileNavigation .menuIcon {
     text-align: right;
@@ -622,6 +626,8 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   .portfolio-1 {
     height: 512px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../assets/homepageportfolio-large.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
   }
   .portfolio-1 .portfolioCopyWrapperLarge {
     padding: 0 0 50px 40px;
@@ -683,6 +689,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   .ourCapabilities .innerContainer .capabilitiesList div {
     margin-bottom: 0;
+    padding-right: 30px;
   }
   .ourCapabilities .innerContainer .capabilitiesList div .header-12 {
     margin-bottom: 25px;
@@ -691,46 +698,76 @@ footer .innerContainer .mainFooter .footerLink:hover {
     padding-bottom: 50px;
   }
   .ourCustomers {
-    height: 100vh;
-    width: 100%;
-  }
-  .ourCustomers .innerContainer {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    height: 970px;
+    padding: 0 40px;
   }
   .ourCustomers .innerContainer .ourCustomersIntro {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 4fr 1fr;
-        grid-template-columns: 4fr 1fr;
-    margin-bottom: 150px;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    margin-bottom: 100px;
+  }
+  .ourCustomers .innerContainer .ourCustomersIntro div h2 {
+    font-size: 40px;
   }
   .ourCustomers .innerContainer .ourCustomersIntro .buttonWrapper {
     text-align: right;
   }
   .ourCustomers .innerContainer .logoWall .logoStrip {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-    grid-row-gap: 100px;
+    grid-row-gap: 50px;
   }
-  .ourCustomers .innerContainer .logoWall .logoStrip img {
-    opacity: 0.5;
-    width: 130px;
-    display: block;
-    margin: auto;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  .latestJournalPosts {
+    background-color: #FAFAFA;
+    height: 790px;
+    padding: 0 40px;
   }
-  .ourCustomers .innerContainer .logoWall .logoStrip img:hover {
-    opacity: 1;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  .latestJournalPosts .innerContainer .latestJournalPostsIntro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+  }
+  .latestJournalPosts .innerContainer .latestJournalPostsIntro h4 {
+    font-size: 25px;
+  }
+  .latestJournalPosts .innerContainer .journalPosts {
+    grid-column-gap: 30px;
+  }
+  .latestJournalPosts .innerContainer .journalPosts div img {
+    margin-bottom: 35px;
+  }
+  .latestJournalPosts .innerContainer .journalPosts div h4 {
+    margin-bottom: 16px;
+    font-size: 25px;
+  }
+  .latestJournalPosts .innerContainer .journalPosts div h6 {
+    padding-right: 10px;
+  }
+  .footerCTASection {
+    height: 1024px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  footer {
+    height: 734px;
+    padding: 0 40px;
+  }
+  footer .innerContainer .footerHeader {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    margin-bottom: 100px;
+  }
+  footer .innerContainer .footerHeader h4 {
+    font-size: 25px;
+  }
+  footer .innerContainer .mainFooter {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
   }
 }
 

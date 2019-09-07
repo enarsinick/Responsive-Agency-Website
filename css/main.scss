@@ -2,6 +2,7 @@
 // Colours
 $mainBlack: #000000;
 $mainWhite: #FFFFFF;
+$brandColour: #5B41DD;
 $backgroundGrey: #FAFAFA;
 $headerColour: #000000;
 $bodyCopyColour: #686677;
@@ -182,7 +183,6 @@ p {
 footer {
     background-color: $mainBlack;
     height: 822px;
-    width: 100%;
     
     .innerContainer {
         position: relative;
@@ -452,7 +452,6 @@ footer {
 
 .ourCustomers {
     height: 100vh;
-    width: 100%;
 
     .innerContainer {
         position: relative;
@@ -499,7 +498,6 @@ footer {
 .latestJournalPosts {
     background-color: $backgroundGrey;
     height: 1000px;
-    width: 100%;
 
     .innerContainer {
         position: relative;
@@ -590,6 +588,11 @@ footer {
 
 @media (max-width: 768px) {
 
+    /////////////// Buttons
+    .button-blk, .button-wht, .button-grey {
+        padding: 15px 30px;
+    }
+
     .outerContainer {
         padding: 0 40px;
     }
@@ -613,33 +616,43 @@ footer {
                 z-index: 1;
                 top: 0;
                 right: 0;
-                background-color: $mainBlack;
+                background-color: $brandColour;
                 overflow-x: hidden;
                 transition: 0.4s;
-                padding-top: 60px;
-              }
-              
-              .sidenav a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                font-family: $headerFont;
-                color: $mainWhite;
-                display: block;
-                transition: 0.3s;
-              }
-              
-              .sidenav a:hover {
-                color: #f1f1f1;
-              }
-              
-              .sidenav .closebtn {
-                position: absolute;
-                top: 10px;
-                right: 25px;
-                font-size: 36px;
-              }
+                padding-top: 100px;
 
+                a {
+                    padding: 8px 8px 20px 40px;
+                    text-decoration: none;
+                    font-size: 50px;
+                    font-family: $headerFont;
+                    color: $mainWhite;
+                    display: block;
+                    transition: 0.3s;
+                  }
+
+                  .closebtn {
+                    position: absolute;
+                    top: 30px;
+                    right: 40px;
+                    font-size: 50px;
+                  }
+
+                  .socialIcons-responsive {
+                  
+                    a {
+
+                        display: inline-block;
+                        padding-left: 40px;
+
+                        img {
+                            width: 30px;
+                        }
+                    }
+                }
+
+              }
+              
               .menuIcon {
                   text-align: right;
 
@@ -659,6 +672,7 @@ footer {
     //// Portfolio Homepage
     .portfolio-1 {
         height: 512px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
 
         .portfolioCopyWrapperLarge {
             padding: 0 0 50px 40px;
@@ -725,6 +739,7 @@ footer {
 
                 div {
                     margin-bottom: 0;
+                    padding-right: 30px;
 
                     .header-12 {
                         margin-bottom: 25px;
@@ -740,83 +755,101 @@ footer {
         }
     }
 
-    // .ourCapabilities {
-    //     height: 800px;
-    //     background-color: $backgroundGrey;
-    
-    //         .innerContainer {
-    //             width: 100%;
-    //             display: grid;
-    //             grid-template-columns: 50% 50%;
-    //             position: relative;
-    //             top: 50%;
-    //             -webkit-transform: translateY(-50%);
-    //             -ms-transform: translateY(-50%);
-    //             transform: translateY(-50%);
-                
-    //             div h6 {
-    //                 margin-bottom: 80px;
-    //                 padding-right: 40px;
-    //             }
-    
-    //             .capabilitiesList {
-    //                 display: grid;
-    //                 grid-template-columns: 1fr 1fr;
-    //                 grid-column-gap: 40px;
-    
-    //                 div {
-    //                     margin-bottom: 80px;
-    //                     padding-right: 40px;
-    
-    //                     .header-12 {
-    //                         margin-bottom: 25px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-
     ///// Our Customers 
     .ourCustomers {
-        height: 100vh;
-        width: 100%;
+        height: 970px;
+        padding: 0 40px;
     
         .innerContainer {
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    
+        
             .ourCustomersIntro {
-                display: grid;
-                grid-template-columns: 4fr 1fr;
-                margin-bottom: 150px;
-    
+                grid-template-columns: 2fr 1fr;
+                margin-bottom: 100px;
+
+                div h2 {
+                    font-size: 40px;
+                }
+
                 .buttonWrapper {
                     text-align: right;
                 }
             }
-    
+
             .logoWall .logoStrip {
-                display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
-                grid-row-gap: 100px;
-    
-                img {
-                    opacity: 0.5;
-                    width: 130px;
-                    display: block;
-                    margin: auto;
-                    transition: 0.2s;
+                grid-row-gap: 50px;
+
+            }
+        }
+    }
+
+    ////// Latest Journal Posts
+
+    .latestJournalPosts {
+        background-color: $backgroundGrey;
+        height: 790px;
+        padding: 0 40px;
+
+        .innerContainer {
+
+            .latestJournalPostsIntro {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-bottom: 50px;
+                
+                h4 {
+                    font-size: 25px;
                 }
-    
-                img:hover {
-                    opacity: 1;
-                    transition: 0.2s;
+            }
+
+            .journalPosts {
+                grid-column-gap: 30px;
+
+                div img {
+                    margin-bottom: 35px;
                 }
-    
+
+                div h4 {
+                    margin-bottom: 16px;
+                    font-size: 25px;
+                }
+
+                div h6 {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    ////////////// Footer 
+
+    // CTA 
+
+    .footerCTASection {
+        height: 1024px;
+        grid-template-columns: 1fr;
+    }
+
+    // Main Footer Area
+    footer {
+        height: 734px;
+        padding: 0 40px;
+        
+        .innerContainer {
+
+            .footerHeader {
+                grid-template-columns: 2fr 1fr;;
+                margin-bottom: 100px;
+                
+                h4 {
+                    font-size: 25px;
+                }
+            }
+
+            .mainFooter {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 40px;
             }
         }
     }
