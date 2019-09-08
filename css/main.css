@@ -771,33 +771,24 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
 }
 
-@media (max-width: 425px) {
-  .header {
-    height: 568px;
-  }
-  .header .outerContainer .innerContainer .homepageHeaderWhite {
-    color: #FFFFFF;
-    padding-top: 140px;
-    padding-bottom: 50px;
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 320px) {
+@media (max-width: 426px) {
   .outerContainer {
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .header {
     height: 568px;
   }
   .header .mobileNavigation {
-    padding-top: 20px;
+    padding-top: 30px;
+  }
+  .header .mobileNavigation div img {
+    width: 65px;
   }
   .header .mobileNavigation .sidenav {
     padding-top: 90px;
   }
   .header .mobileNavigation .sidenav a {
-    padding: 8px 8px 10px 20px;
+    padding: 8px 8px 10px 40px;
     font-size: 30px;
   }
   .header .mobileNavigation .sidenav .closebtn {
@@ -808,7 +799,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
     font-size: 40px;
   }
   .header .mobileNavigation .sidenav .socialIcons-responsive a {
-    padding-left: 20px;
+    padding-left: 40px;
   }
   .header .mobileNavigation .sidenav .socialIcons-responsive a img {
     width: 20px;
@@ -831,7 +822,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
   }
   .portfolio-1 .portfolioCopyWrapperLarge {
-    padding: 0 0 20px 20px;
+    padding: 0 0 40px 30px;
   }
   .portfolio-1 .portfolioCopyWrapperLarge h6 {
     display: none;
@@ -849,7 +840,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5)), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
   }
   .portfolio-2 .portfolioImage-1 .portfolioCopyWrapper {
-    padding: 0 0 20px 20px;
+    padding: 0 0 40px 30px;
   }
   .portfolio-2 .portfolioImage-1 .portfolioCopyWrapper h6 {
     display: none;
@@ -860,13 +851,13 @@ footer .innerContainer .mainFooter .footerLink:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
   }
   .portfolio-2 .portfolioImage-2 .portfolioCopyWrapper {
-    padding: 0 0 20px 20px;
+    padding: 0 0 40px 30px;
   }
   .portfolio-2 .portfolioImage-2 .portfolioCopyWrapper h6 {
     display: none;
   }
   .ourCapabilities {
-    padding: 0 20px;
+    padding: 0 40px;
     height: 1219px;
   }
   .ourCapabilities .innerContainer .capabilitiesIntro {
@@ -875,11 +866,11 @@ footer .innerContainer .mainFooter .footerLink:hover {
   .ourCapabilities .innerContainer div h2 {
     margin-bottom: 30px;
     font-size: 25px;
-    padding-right: 0;
+    padding-right: 25px;
   }
   .ourCapabilities .innerContainer div h6 {
     margin-bottom: 50px;
-    padding-right: 0;
+    padding-right: 20px;
   }
   .ourCapabilities .innerContainer .capabilitiesList {
     display: -ms-grid;
@@ -891,6 +882,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
   .ourCapabilities .innerContainer .capabilitiesList div {
     margin-bottom: 50px;
     padding: 0;
+    padding-right: 40px;
   }
   .ourCapabilities .innerContainer .capabilitiesList div .header-12 {
     margin-bottom: 25px;
@@ -908,7 +900,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   footer {
     height: 1237px;
-    padding: 0 20px;
+    padding: 0 40px;
   }
   footer .innerContainer .footerHeader {
     -ms-grid-columns: 1fr;
@@ -936,7 +928,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   .latestJournalPosts {
     height: 935px;
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .latestJournalPosts .innerContainer .latestJournalPostsIntro {
     -ms-grid-columns: 1fr;
@@ -965,7 +957,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   .ourCustomers {
     height: 841px;
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .ourCustomers .innerContainer .ourCustomersIntro {
     -ms-grid-columns: 1fr;
@@ -988,6 +980,65 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   .ourCustomers .innerContainer .logoWall .logoStrip img {
     width: 90px;
+  }
+}
+
+@media (max-width: 321px) {
+  .outerContainer {
+    padding: 0 20px;
+  }
+  .header .mobileNavigation {
+    padding-top: 20px;
+  }
+  .header .mobileNavigation .sidenav {
+    padding-top: 90px;
+  }
+  .header .mobileNavigation .sidenav a {
+    padding: 8px 8px 10px 20px;
+  }
+  .header .mobileNavigation .sidenav .socialIcons-responsive a {
+    padding-left: 20px;
+  }
+  .header .mobileNavigation .menuIcon {
+    text-align: right;
+  }
+  .header .mobileNavigation .menuIcon img {
+    width: 25px;
+    cursor: pointer;
+  }
+  .header .outerContainer .innerContainer .homepageHeaderWhite {
+    padding-top: 140px;
+    padding-bottom: 50px;
+    font-size: 25px;
+  }
+  .portfolio-1 .portfolioCopyWrapperLarge,
+  .portfolio-2 .portfolioImage-1 .portfolioCopyWrapper,
+  .portfolio-2 .portfolioImage-2 .portfolioCopyWrapper {
+    padding: 0 0 30px 20px;
+  }
+  .ourCapabilities {
+    padding: 0 20px;
+  }
+  .ourCapabilities .innerContainer div h6,
+  .ourCapabilities .innerContainer .capabilitiesList div {
+    padding-right: 0;
+  }
+  .footerCTASection {
+    height: 426px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .footerCTASection .footerCTA a h2 {
+    font-size: 30px;
+  }
+  footer {
+    padding: 0 20px;
+  }
+  .latestJournalPosts {
+    padding: 0 20px;
+  }
+  .ourCustomers {
+    padding: 0 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
