@@ -572,6 +572,16 @@ footer {
         }
     }
 
+    //// Our Capabilities
+    .ourCapabilities, .ourCustomers, .latestJournalPosts, footer {
+        padding: 0 80px;
+    }
+
+    .mainFooter {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 40px;
+    }
+
 }
 
 ////////////////////////////////// Tablet Styling
@@ -876,7 +886,7 @@ footer {
                     padding: 0;
                     position: absolute;
                     top: 20px;
-                    right: 20px;
+                    right: 40px;
                     font-size: 40px;
                   }
 
@@ -1069,7 +1079,7 @@ footer {
                 margin-bottom: 70px;
                 
                 h4, .buttonWrapper {
-                    text-align: center;
+                    text-align: left;
                 }
             }
 
@@ -1083,8 +1093,7 @@ footer {
 
                 div h4 {
                     margin-bottom: 0px;
-                    text-align: center;
-                    padding: 0 15px;
+                    text-align: left;
                 }
 
                 div h6 {
@@ -1148,7 +1157,11 @@ footer {
 
                 a {
                     padding: 8px 8px 10px 20px;
-                  }
+                }
+
+                .closebtn {
+                    right: 20px;
+                }
 
                   .socialIcons-responsive {
                   

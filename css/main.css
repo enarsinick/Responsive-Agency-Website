@@ -556,6 +556,14 @@ footer .innerContainer .mainFooter .footerLink:hover {
   .header .navigation .socialIcons img {
     padding-left: 15px;
   }
+  .ourCapabilities, .ourCustomers, .latestJournalPosts, footer {
+    padding: 0 80px;
+  }
+  .mainFooter {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -795,7 +803,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
     padding: 0;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 40px;
     font-size: 40px;
   }
   .header .mobileNavigation .sidenav .socialIcons-responsive a {
@@ -937,7 +945,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
     margin-bottom: 70px;
   }
   .latestJournalPosts .innerContainer .latestJournalPostsIntro h4, .latestJournalPosts .innerContainer .latestJournalPostsIntro .buttonWrapper {
-    text-align: center;
+    text-align: left;
   }
   .latestJournalPosts .innerContainer .journalPosts {
     -ms-grid-columns: 1fr;
@@ -949,8 +957,7 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   .latestJournalPosts .innerContainer .journalPosts div h4 {
     margin-bottom: 0px;
-    text-align: center;
-    padding: 0 15px;
+    text-align: left;
   }
   .latestJournalPosts .innerContainer .journalPosts div h6 {
     display: none;
@@ -995,6 +1002,9 @@ footer .innerContainer .mainFooter .footerLink:hover {
   }
   .header .mobileNavigation .sidenav a {
     padding: 8px 8px 10px 20px;
+  }
+  .header .mobileNavigation .sidenav .closebtn {
+    right: 20px;
   }
   .header .mobileNavigation .sidenav .socialIcons-responsive a {
     padding-left: 20px;
