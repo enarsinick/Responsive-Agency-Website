@@ -213,7 +213,6 @@ footer {
 
         .mainFooter {
             display: grid;
-            // grid-template-columns: 40% 25% 25% 20%;
             grid-template-columns: 3fr 2fr 2fr 1fr;
 
             .header-12 {
@@ -252,10 +251,6 @@ footer {
 .theStudioCTA {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/room-3m9132_mMSQ-unsplash.jpg");
 }
-
-
-
-
 
 //////////////////////////////////////////// HOMEPAGE ///////////////////////////////////////
 
@@ -545,9 +540,6 @@ footer {
     }
 }
 
-
-
-
 ////////////////////////////////// Laptop Large Styling
 
 @media (max-width: 1440px) { 
@@ -566,7 +558,7 @@ footer {
 }
 
 
-////////////////////////////////// Laptop Styling
+////////////////////////////////// Standard Laptop Styling
 
 @media (max-width: 1024px) { 
 
@@ -581,8 +573,6 @@ footer {
     }
 
 }
-
-
 
 ////////////////////////////////// Tablet Styling
 
@@ -855,9 +845,6 @@ footer {
     }
 }
 
-
-
-
 ////////////////////////////////// Mobile L Styling
 
 @media (max-width: 425px) { 
@@ -878,14 +865,279 @@ footer {
 
 ////////////////////////////////// Mobile S Styling
 
-@media (max-width: 320px) { 
+@media (max-width: 320px) {
     
-    .outerContainer .innerContainer .homepageHeaderWhite {
-        color: $mainWhite;
-        padding-top: 140px;
-        padding-bottom: 50px;
-        font-size: 25px;
-        
+    .outerContainer {
+        padding: 0 20px;
+    }
+
+    ////// Header 
+    .header {
+        height: 568px;
+
+        .mobileNavigation {
+            padding-top: 20px;
+
+            .sidenav {
+                padding-top: 90px;
+
+                a {
+                    padding: 8px 8px 10px 20px;
+                    font-size: 30px;
+                  }
+
+                  .closebtn {
+                    padding: 0;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    font-size: 40px;
+                  }
+
+                  .socialIcons-responsive {
+                  
+                    a {
+                        padding-left: 20px;
+
+                        img {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+            
+            .menuIcon {
+                text-align: right;
+
+                img {
+                width: 25px;
+                cursor: pointer;
+                }
+            }
         }
 
+        .outerContainer .innerContainer .homepageHeaderWhite {
+            padding-top: 140px;
+            padding-bottom: 50px;
+            font-size: 25px;
+            
+            }
+    }
+
+    //// Portfolio Homepage
+    .portfolio-1 {
+        height: 250px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
+
+        .portfolioCopyWrapperLarge {
+            padding: 0 0 20px 20px;
+
+            h6 {
+                display: none;
+            }
+
+            h2 {
+                padding-top: 0px;
+            }
+        }
+    }
+
+    .portfolio-2 {
+        grid-template-columns: 1fr;
+    
+        .portfolioImage-1 {
+            height: 250px;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.50)), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
+    
+            .portfolioCopyWrapper {
+                padding: 0 0 20px 20px;
+                
+                h6 {
+                    display: none;
+                }
+            }
+        }
+    
+        .portfolioImage-2 {
+            height: 250px;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.50)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
+            
+            .portfolioCopyWrapper {
+                padding: 0 0 20px 20px;
+    
+                h6 {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    //// Our Capabilities
+    .ourCapabilities {
+        padding: 0 20px;
+        height: 1219px;
+
+        .innerContainer {
+
+            .capabilitiesIntro{
+                margin-bottom: 80px;
+            }
+
+            div h2 {
+                margin-bottom: 30px;
+                font-size: 25px;
+                padding-right: 0;
+            }
+
+            div h6 {
+                margin-bottom: 50px;
+                padding-right: 0;
+            }
+            
+
+            .capabilitiesList {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row-gap: 0;
+
+                div {
+                    margin-bottom: 50px;
+                    padding: 0;
+
+                    .header-12 {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            .capabilitiesList:first-child {
+                div {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    ////////////// Footer 
+
+    // CTA 
+
+    .footerCTASection {
+        height: 426px;
+        grid-template-columns: 1fr;
+
+        .footerCTA a h2 {
+            font-size: 30px;
+        }
+    }
+
+    // Main Footer Area
+    footer {
+        height: 1237px;
+        padding: 0 20px;
+        
+        .innerContainer {
+
+            .footerHeader {
+                grid-template-columns: 1fr;;
+                margin-bottom: 70px;
+                
+                h4 {
+                    font-size: 25px;
+                    text-align: center;
+                    margin-bottom: 80px;
+                }
+
+                .buttonWrapper {
+                    text-align: center;
+                }
+            }
+
+            .mainFooter {
+                grid-template-columns: 1fr;
+                text-align: center;
+
+                .header-12 {
+                    margin-bottom: 15px;
+                }
+
+                div {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+
+    ////// Latest Journal Posts
+
+    .latestJournalPosts {
+        height: 935px;
+        padding: 0 20px;
+
+        .innerContainer {
+
+            .latestJournalPostsIntro {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+                margin-bottom: 70px;
+                
+                h4, .buttonWrapper {
+                    text-align: center;
+                }
+            }
+
+            .journalPosts {
+                grid-template-columns: 1fr;
+                grid-row-gap: 50px;
+
+                div img {
+                    margin-bottom: 25px;
+                }
+
+                div h4 {
+                    margin-bottom: 0px;
+                    text-align: center;
+                    padding: 0 15px;
+                }
+
+                div h6 {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    ///// Our Customers 
+    .ourCustomers {
+        height: 841px;
+        padding: 0 20px;
+    
+        .innerContainer {
+        
+            .ourCustomersIntro {
+                grid-template-columns: 1fr;
+                grid-row-gap: 40px;
+                margin-bottom: 80px;
+
+
+                div h2 {
+                    font-size: 25px;
+                }
+
+                .buttonWrapper {
+                    text-align: left;
+                }
+            }
+
+            .logoWall .logoStrip {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-row-gap: 40px;
+
+                img {
+                    width: 90px;
+                }
+            }
+        }
+    }
 }
