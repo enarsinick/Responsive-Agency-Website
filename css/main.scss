@@ -1,3 +1,4 @@
+///////////////////////////////////////////////// Variables
 
 // Colours
 $mainBlack: #000000;
@@ -6,8 +7,53 @@ $brandColour: #5B41DD;
 $backgroundGrey: #FAFAFA;
 $headerColour: #000000;
 $bodyCopyColour: #686677;
+
+// Fonts
 $headerFont: 'Work Sans', sans-serif;
 $bodyFont: 'Roboto', sans-serif;
+
+// Pixel widths
+$largeLaptop: 1440px;
+$standardLaptop: 1024px;
+$tablet: 768px;
+$largeMobile: 426px;
+$smallMobile: 321px;
+
+
+
+///////////////////////////////////////////////// Mixins
+@mixin largeLaptop {
+    @media (max-width: #{$largeLaptop}) {
+        @content;
+    }
+}
+
+@mixin standardLaptop {
+    @media (max-width: #{$standardLaptop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin largeMobile {
+    @media (max-width: #{$largeMobile}) {
+        @content;
+    }
+}
+
+@mixin smallMobile {
+    @media (max-width: #{$smallMobile}) {
+        @content;
+    }
+}
+
+
+
 
 ////////////////////////////////// Universal Styling
 * {
@@ -24,6 +70,14 @@ body {
     padding: 0 80px;
     max-width: 1712px;
     margin: auto;
+
+    @include tablet {
+        padding: 0 40px;
+    }
+
+    @include largeMobile {
+        padding: 0 40px;
+    }
 }
 
 .innerContainer {
@@ -106,6 +160,10 @@ p {
     border-radius: 2px;
     cursor: pointer;
     transition: 0.1s;
+
+    @include tablet {
+        padding: 15px 30px;
+    }
 }
 
 .button-blk:hover {
@@ -124,6 +182,10 @@ p {
     border-radius: 2px;
     cursor: pointer;
     transition: 0.1s;
+
+    @include tablet {
+        padding: 15px 30px;
+    }
 }
 
 .button-wht:hover {
@@ -142,6 +204,10 @@ p {
     border-radius: 2px;
     cursor: pointer;
     transition: 0.1s;
+
+    @include tablet {
+        padding: 15px 30px;
+    }
 }
 
 .button-grey:hover {
@@ -159,6 +225,11 @@ p {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include tablet {
+        height: 1024px;
+        grid-template-columns: 1fr;
+    }
 
     .footerCTA {
         height: 100%;
@@ -183,6 +254,15 @@ p {
 footer {
     background-color: $mainBlack;
     height: 822px;
+
+    @include standardLaptop {
+        padding: 0 80px;
+    }
+
+    @include tablet {
+        height: 734px;
+        padding: 0 40px;
+    }
     
     .innerContainer {
         position: relative;
@@ -195,6 +275,11 @@ footer {
             display: grid;
             grid-template-columns: 4fr 1fr;;
             margin-bottom: 170px;
+
+            @include tablet {
+                grid-template-columns: 2fr 1fr;;
+                margin-bottom: 100px;
+            }
             
             h4 {
                 color: white;
@@ -204,6 +289,10 @@ footer {
                 -webkit-transform: translateY(-50%);
                 -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
+
+                @include tablet {
+                    font-size: 25px;
+                }
             }
 
             .buttonWrapper {
@@ -214,6 +303,11 @@ footer {
         .mainFooter {
             display: grid;
             grid-template-columns: 3fr 2fr 2fr 1fr;
+
+            @include standardLaptop {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 40px;
+            }
 
             .header-12 {
                 color: $mainWhite;
@@ -260,354 +354,27 @@ footer {
     height: 850px;
     background-color: $mainBlack;
 
+    @include largeMobile {
+        height: 568px;
+    }
+
     .mobileNavigation {
         display: none;
-    }
 
-    .navigation {
-        // CSS Grid system for the top navigation
-        display: grid;
-        grid-template-columns: 20% 60% 20%;
-        align-items: center;
-        padding-top: 60px;
-
-        // Styling the top navigation menu
-        .menu {
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-            text-align: center;
-
-            li {
-                display: inline;
-                padding: 15px;
-                vertical-align: middle;
-                cursor: pointer;
-            }
-
-            a {
-                text-decoration: none;
-                margin: 0 8px;
-                padding-bottom: 10px;
-                vertical-align: middle;
-                color: $mainWhite;
-                font-family: $headerFont;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            a:hover {
-                border-bottom: 1.5px white solid;
-                transition: 0.1s;
-            }
-        }
-        // Top nav social icons 
-        .socialIcons {
-            padding: 0;
-            margin: 0;
-            text-align: right;
-            
-                img {
-                    width: 22px;
-                    padding-left: 28px;
-                }
-            }
-    }
-
-    .outerContainer .innerContainer .homepageHeaderWhite {
-    color: $mainWhite;
-    padding-top: 200px;
-    padding-bottom: 50px;
-    
-    }
-}
-
-////// Homepage portfolio
-
-.portfolio-1 {
-    height: 1080px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.portfolioCopyWrapperLarge {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0 0 80px 80px;
-    color: white;
-
-    h2 {
-        padding-top: 20px;
-    }
-
-    h6 {
-        color: white;
-    }
-}
-
-.portfolio-2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-    .portfolioImage-1 .portfolioCopyWrapper h6,
-    .portfolioImage-2 .portfolioCopyWrapper h6 {
-        color: white;
-    }
-
-    .portfolioImage-1 {
-        height: 640px;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.50)), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-
-        .portfolioCopyWrapper {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 0 0 80px 80px;
-            color: white;
-            
-            h3 {
-                padding-top: 20px;
-            }
-        }
-    }
-
-    .portfolioImage-2 {
-        height: 640px;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.50)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        
-        .portfolioCopyWrapper {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 0 0 80px 80px;
-            color: white;
-
-            h3 {
-                padding-top: 20px;
-            }
-        }
-    }
-}
-
-////// Our Capabilities
-
-.ourCapabilities {
-    height: 800px;
-    background-color: $backgroundGrey;
-
-        .innerContainer {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-
-            div h2 {
-                margin-bottom: 50px;
-            }
-            
-            div h6 {
-                margin-bottom: 80px;
-                padding-right: 60px;
-            }
-
-            .capabilitiesList {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-column-gap: 40px;
-
-                div {
-                    margin-bottom: 80px;
-                    // padding-right: 40px;
-
-                    .header-12 {
-                        margin-bottom: 25px;
-                    }
-                }
-            }
-        }
-    }
-
-////// Our Customers
-
-.ourCustomers {
-    height: 100vh;
-
-    .innerContainer {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-
-        .ourCustomersIntro {
-            display: grid;
-            grid-template-columns: 4fr 1fr;
-            margin-bottom: 150px;
-
-            .buttonWrapper {
-                text-align: right;
-            }
-        }
-
-        .logoWall .logoStrip {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-row-gap: 100px;
-
-            img {
-                opacity: 0.5;
-                width: 130px;
-                display: block;
-                margin: auto;
-                transition: 0.2s;
-            }
-
-            img:hover {
-                opacity: 1;
-                transition: 0.2s;
-            }
-
-        }
-    }
-}
-
-////// Latest Journal Posts
-
-.latestJournalPosts {
-    background-color: $backgroundGrey;
-    height: 1000px;
-
-    .innerContainer {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-
-        .latestJournalPostsIntro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-bottom: 80px;
-            
-            h4 {
-                position: relative;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-            }
-
-            .buttonWrapper {
-                text-align: right;
-            }
-        }
-
-        .journalPosts {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 40px;
-
-            div img {
-                width: 100%;
-                margin-bottom: 50px;
-            }
-
-            div h4 {
-                margin-bottom: 16px;
-            }
-
-            div h6 {
-                padding-right: 50px;
-            }
-        }
-    }
-}
-
-////////////////////////////////// Laptop Large Styling
-
-@media (max-width: 1440px) { 
-
-    ////// Homepage portfolio
-
-    .portfolio-1 .portfolioCopyWrapperLarge {
-        padding: 0 0 60px 60px;
-    }
-
-    .portfolio-2 .portfolioImage-1 .portfolioCopyWrapper, 
-    .portfolio-2 .portfolioImage-2 .portfolioCopyWrapper {
-        padding: 0 0 60px 60px;
-    }
-
-}
-
-
-////////////////////////////////// Standard Laptop Styling
-
-@media (max-width: 1024px) { 
-
-    .header .navigation {
-        .menu li {
-            padding: 0;
-        }
-        
-        .socialIcons img {
-            padding-left: 15px;
-        }
-    }
-
-    //// Our Capabilities
-    .ourCapabilities, .ourCustomers, .latestJournalPosts, footer {
-        padding: 0 80px;
-    }
-
-    .mainFooter {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 40px;
-    }
-
-}
-
-////////////////////////////////// Tablet Styling
-
-@media (max-width: 768px) {
-
-    /////////////// Buttons
-    .button-blk, .button-wht, .button-grey {
-        padding: 15px 30px;
-    }
-
-    .outerContainer {
-        padding: 0 40px;
-    }
-
-    .header {
-
-        .navigation {
-            display: none;
-        }
-
-        .mobileNavigation {
+        @include tablet {
             display: grid;
             grid-template-columns: 1fr 1fr;
             padding-top: 40px;
             align-items: center;
+
+            .menuIcon {
+                text-align: right;
+
+                img {
+                  width: 30px;
+                  cursor: pointer;
+                }
+            }
 
             .sidenav {
                 height: 100%;
@@ -629,19 +396,18 @@ footer {
                     color: $mainWhite;
                     display: block;
                     transition: 0.3s;
-                  }
+                }
 
-                  .closebtn {
+                .closebtn {
                     position: absolute;
                     top: 30px;
                     right: 40px;
                     font-size: 50px;
-                  }
+                }
 
-                  .socialIcons-responsive {
+                .socialIcons-responsive {
                   
                     a {
-
                         display: inline-block;
                         padding-left: 40px;
 
@@ -650,228 +416,23 @@ footer {
                         }
                     }
                 }
-
-              }
-              
-              .menuIcon {
-                  text-align: right;
-
-                  img {
-                    width: 30px;
-                    cursor: pointer;
-                  }
-              }
-        }
-
-        .homepageHeaderWhite {
-            font-size: 50px;
-        }
-        
-    }
-
-    //// Portfolio Homepage
-    .portfolio-1 {
-        height: 512px;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
-
-        .portfolioCopyWrapperLarge {
-            padding: 0 0 50px 40px;
-
-            h6 {
-                font-size: 16px;
-            }
-
-                h2 {
-                font-size: 25px;
-                padding-top: 5px;
             }
         }
-    }
 
-    .portfolio-2 .portfolioImage-1, 
-    .portfolio-2 .portfolioImage-2 {
-        height: 257px;
-
-        .portfolioCopyWrapper {
-            padding: 0 0 40px 40px;
-
-            h6 {
-                font-size: 16px;
-            }
-
-            h3 {
-                font-size: 25px;
-                padding-top: 5px;
-            }
-        }
-    }
-
-    //// Our Capabilities
-    .ourCapabilities {
-        padding: 0 40px;
-        height: 973px;
-
-        .innerContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-
-            .capabilitiesIntro{
-                margin-bottom: 80px;
-            }
-
-            div h2 {
-                margin-bottom: 30px;
-                font-size: 40px;
-                padding-right: 50%;
-            }
-
-            div h6 {
-                margin-bottom: 50px;
-                padding-right: 30%;
-            }
-            
-
-            .capabilitiesList {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
-                grid-column-gap: 40px;
-
-                div {
-                    margin-bottom: 0;
-                    padding-right: 30px;
-
-                    .header-12 {
-                        margin-bottom: 25px;
-                    }
-                }
-            }
-
-            .capabilitiesList:first-child {
-                div {
-                    padding-bottom: 50px;
-                }
-            }
-        }
-    }
-
-    ///// Our Customers 
-    .ourCustomers {
-        height: 970px;
-        padding: 0 40px;
-    
-        .innerContainer {
-        
-            .ourCustomersIntro {
-                grid-template-columns: 2fr 1fr;
-                margin-bottom: 100px;
-
-                div h2 {
-                    font-size: 40px;
-                }
-
-                .buttonWrapper {
-                    text-align: right;
-                }
-            }
-
-            .logoWall .logoStrip {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                grid-row-gap: 50px;
-
-            }
-        }
-    }
-
-    ////// Latest Journal Posts
-
-    .latestJournalPosts {
-        background-color: $backgroundGrey;
-        height: 790px;
-        padding: 0 40px;
-
-        .innerContainer {
-
-            .latestJournalPostsIntro {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                margin-bottom: 50px;
-                
-                h4 {
-                    font-size: 25px;
-                }
-            }
-
-            .journalPosts {
-                grid-column-gap: 30px;
-
-                div img {
-                    margin-bottom: 35px;
-                }
-
-                div h4 {
-                    margin-bottom: 16px;
-                    font-size: 25px;
-                }
-
-                div h6 {
-                    padding-right: 10px;
-                }
-            }
-        }
-    }
-
-    ////////////// Footer 
-
-    // CTA 
-
-    .footerCTASection {
-        height: 1024px;
-        grid-template-columns: 1fr;
-    }
-
-    // Main Footer Area
-    footer {
-        height: 734px;
-        padding: 0 40px;
-        
-        .innerContainer {
-
-            .footerHeader {
-                grid-template-columns: 2fr 1fr;;
-                margin-bottom: 100px;
-                
-                h4 {
-                    font-size: 25px;
-                }
-            }
-
-            .mainFooter {
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-column-gap: 40px;
-            }
-        }
-    }
-}
-
-////////////////////////////////// Mobile L Styling
-
-@media (max-width: 426px) {
-    
-    .outerContainer {
-        padding: 0 40px;
-    }
-
-    ////// Header 
-    .header {
-        height: 568px;
-
-        .mobileNavigation {
+        @include largeMobile {
             padding-top: 30px;
 
             div img {
                 width: 65px;
+            }
+
+            .menuIcon {
+                text-align: right;
+
+                img {
+                width: 25px;
+                cursor: pointer;
+                }
             }
 
             .sidenav {
@@ -901,105 +462,390 @@ footer {
                     }
                 }
             }
-            
-            .menuIcon {
-                text-align: right;
+        }
+    }
 
-                img {
-                width: 25px;
+    .navigation {
+        // CSS Grid system for the top navigation
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        align-items: center;
+        padding-top: 60px;
+
+        @include tablet {
+            display: none;
+        }
+
+        // Styling the top navigation menu
+        .menu {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-align: center;
+
+            li {
+                display: inline;
+                padding: 15px;
+                vertical-align: middle;
                 cursor: pointer;
+
+                @include standardLaptop {
+                    padding: 0;
                 }
             }
-        }
 
-        .outerContainer .innerContainer .homepageHeaderWhite {
-            padding-top: 140px;
-            padding-bottom: 50px;
-            font-size: 25px;
+            a {
+                text-decoration: none;
+                margin: 0 8px;
+                padding-bottom: 10px;
+                vertical-align: middle;
+                color: $mainWhite;
+                font-family: $headerFont;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            a:hover {
+                border-bottom: 1.5px white solid;
+                transition: 0.1s;
+            }
+        }
+        // Top nav social icons 
+        .socialIcons {
+            padding: 0;
+            margin: 0;
+            text-align: right;
             
+                img {
+                    width: 22px;
+                    padding-left: 28px;
+
+                    @include standardLaptop {
+                        padding-left: 15px;
+                    }
+                }
             }
     }
 
-    //// Portfolio Homepage
-    .portfolio-1 {
+    .outerContainer .innerContainer .homepageHeaderWhite {
+    color: $mainWhite;
+    padding-top: 200px;
+    padding-bottom: 50px;
+
+    @include tablet {
+        font-size: 50px;
+    }
+
+    @include largeMobile {
+        padding-top: 140px;
+        padding-bottom: 50px;
+        font-size: 25px;
+    }
+    
+    }
+}
+
+////// Homepage portfolio
+
+.portfolio-1 {
+    height: 1080px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    @include tablet {
+        height: 512px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
+    }
+
+    @include largeMobile {
         height: 250px;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5)), url("../assets/homepageportfolio-large.jpg");
+    }
+}
 
-        .portfolioCopyWrapperLarge {
-            padding: 0 0 40px 30px;
+.portfolioCopyWrapperLarge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 80px 80px;
+    color: white;
 
-            h6 {
-                display: none;
-            }
+    @include largeLaptop {
+        padding: 0 0 60px 60px;
+    }
 
-            h2 {
-                padding-top: 0px;
-            }
+    @include tablet {
+        padding: 0 0 50px 40px;
+    }
+
+    @include largeMobile {
+        padding: 0 0 40px 30px;
+    }
+
+    h2 {
+        padding-top: 20px;
+
+        @include tablet {
+            padding-top: 5px;
+            font-size: 25px;
+        }
+
+        @include largeMobile {
+            padding-top: 0px;
         }
     }
 
-    .portfolio-2 {
+    h6 {
+        color: white;
+
+        @include tablet {
+            font-size: 16px;
+        }
+
+        @include largeMobile {
+            display: none;
+        }
+    }
+}
+
+.portfolio-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @include largeMobile {
         grid-template-columns: 1fr;
-    
-        .portfolioImage-1 {
+    }
+
+    .portfolioImage-1 .portfolioCopyWrapper h6,
+    .portfolioImage-2 .portfolioCopyWrapper h6 {
+        color: white;
+    }
+
+    .portfolioImage-1 {
+        height: 640px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.50)), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        @include tablet {
+            height: 257px;
+        }
+
+        @include largeMobile {
             height: 250px;
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.50)), url("../assets/you-x-ventures-tHO1_OuKbg0-unsplash@2x.png");
-    
-            .portfolioCopyWrapper {
+        }
+
+        .portfolioCopyWrapper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 0 80px 80px;
+            color: white;
+
+            @include largeLaptop {
+                padding: 0 0 60px 60px;
+            }
+            
+            @include tablet {
+                padding: 0 0 40px 40px;
+
+                h6 {
+                    font-size: 16px;
+                }
+            }
+
+            @include largeMobile {
                 padding: 0 0 40px 30px;
                 
                 h6 {
                     display: none;
                 }
             }
-        }
-    
-        .portfolioImage-2 {
-            height: 250px;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.50)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
+
             
-            .portfolioCopyWrapper {
-                padding: 0 0 40px 30px;
-    
-                h6 {
-                    display: none;
+            h3 {
+                padding-top: 20px;
+
+                @include tablet {
+                    font-size: 25px;
+                    padding-top: 5px;
                 }
             }
         }
     }
 
-    //// Our Capabilities
-    .ourCapabilities {
+    .portfolioImage-2 {
+        height: 640px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.50)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        @include tablet {
+            height: 257px;
+        }
+
+        @include largeMobile {
+            height: 250px;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.50)), url("../assets/le-buzz-tVnm9I9jb8I-unsplash@2x.png");
+        }
+        
+        .portfolioCopyWrapper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 0 80px 80px;
+            color: white;
+
+            @include largeLaptop {
+                padding: 0 0 60px 60px;
+            }
+
+            @include tablet {
+                padding: 0 0 40px 40px;
+
+                h6 {
+                    font-size: 16px;
+                }
+            }
+
+            @include largeMobile {
+                padding: 0 0 40px 30px;
+                
+                h6 {
+                    display: none;
+                }
+            }
+
+            h3 {
+                padding-top: 20px;
+
+                @include tablet {
+                    font-size: 25px;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+////// Our Capabilities
+
+.ourCapabilities {
+    height: 800px;
+    background-color: $backgroundGrey;
+
+    @include standardLaptop {
+        padding: 0 80px;
+    }
+
+    @include tablet {
+        padding: 0 40px;
+        height: 973px;
+    }
+
+    @include largeMobile {
         padding: 0 40px;
         height: 1219px;
+    }
 
         .innerContainer {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 
-            .capabilitiesIntro{
-                margin-bottom: 80px;
+            @include tablet {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .capabilitiesIntro{
+                    margin-bottom: 80px;
+
+                    @include largeMobile {
+                        margin-bottom: 80px;
+                    }
+                }
+
+                .capabilitiesList:first-child {
+                    div {
+                        padding-bottom: 50px;
+                    }
+                }
             }
 
             div h2 {
-                margin-bottom: 30px;
-                font-size: 25px;
-                padding-right: 25px;
-            }
-
-            div h6 {
                 margin-bottom: 50px;
-                padding-right: 20px;
+
+                @include tablet {
+                    margin-bottom: 30px;
+                    font-size: 40px;
+                    padding-right: 50%;
+                }
+
+                @include largeMobile {
+                    margin-bottom: 30px;
+                    font-size: 25px;
+                    padding-right: 25px;
+                }
             }
             
+            div h6 {
+                margin-bottom: 80px;
+                padding-right: 60px;
+
+                @include tablet {
+                    margin-bottom: 50px;
+                    padding-right: 30%;
+                }
+
+                @include largeMobile {
+                    margin-bottom: 50px;
+                    padding-right: 20px;
+                }
+            }
 
             .capabilitiesList {
                 display: grid;
-                grid-template-columns: 1fr;
-                grid-row-gap: 0;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 40px;
+
+                @include tablet {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    grid-column-gap: 40px;
+                }
+
+                @include largeMobile {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 0;
+                }
 
                 div {
-                    margin-bottom: 50px;
-                    padding: 0;
-                    padding-right: 40px;
+                    margin-bottom: 80px;
+
+                    @include tablet {
+                        margin-bottom: 0;
+                        padding-right: 30px;
+                    }
+
+                    @include largeMobile {
+                        margin-bottom: 50px;
+                        padding: 0;
+                        padding-right: 40px;    
+                    }
 
                     .header-12 {
                         margin-bottom: 25px;
@@ -1007,13 +853,175 @@ footer {
                 }
             }
 
-            .capabilitiesList:first-child {
-                div {
-                    padding-bottom: 0;
+            @include largeMobile {
+                .capabilitiesList:first-child {
+                    div {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
     }
+
+////// Our Customers
+
+.ourCustomers {
+    height: 100vh;
+
+    @include standardLaptop {
+        padding: 0 80px;
+    }
+
+    @include tablet {
+        height: 970px;
+        padding: 0 40px;
+    }
+
+    .innerContainer {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        .ourCustomersIntro {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            margin-bottom: 150px;
+
+            @include tablet {
+                grid-template-columns: 2fr 1fr;
+                margin-bottom: 100px;
+
+                div h2 {
+                    font-size: 40px;
+                }
+            }
+
+            .buttonWrapper {
+                text-align: right;
+            }
+        }
+
+        .logoWall .logoStrip {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 100px;
+
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-row-gap: 50px;
+            }
+
+            img {
+                opacity: 0.5;
+                width: 130px;
+                display: block;
+                margin: auto;
+                transition: 0.2s;
+            }
+
+            img:hover {
+                opacity: 1;
+                transition: 0.2s;
+            }
+
+        }
+    }
+}
+
+////// Latest Journal Posts
+
+.latestJournalPosts {
+    background-color: $backgroundGrey;
+    height: 1000px;
+
+    @include standardLaptop {
+        padding: 0 80px;
+    }
+
+    @include tablet {
+        height: 790px;
+        padding: 0 40px;
+    }
+
+    .innerContainer {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        .latestJournalPostsIntro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 80px;
+
+            @include tablet {
+                margin-bottom: 50px;
+            }
+            
+            h4 {
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+                @include tablet {
+                    font-size: 25px;
+                }
+            }
+
+            .buttonWrapper {
+                text-align: right;
+            }
+        }
+
+        .journalPosts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 40px;
+
+            @include tablet {
+                grid-column-gap: 30px;
+            }
+
+            div img {
+                width: 100%;
+                margin-bottom: 50px;
+
+                @include tablet {
+                    margin-bottom: 35px;
+                }
+            }
+
+            div h4 {
+                margin-bottom: 16px;
+
+                @include tablet {
+                    margin-bottom: 16px;
+                    font-size: 25px;
+                }
+            }
+
+            div h6 {
+                padding-right: 50px;
+
+                @include tablet {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+////////////////////////////////// Mobile L Styling
+
+@media (max-width: 426px) {
+    
 
     ////////////// Footer 
 
