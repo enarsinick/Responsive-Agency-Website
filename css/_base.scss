@@ -1,0 +1,164 @@
+////////////////////////////////// Universal Styling
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.outerContainer {
+    padding: 0 80px;
+    max-width: 1712px;
+    margin: auto;
+
+    @include tablet {
+        padding: 0 40px;
+    }
+
+    @include largeMobile {
+        padding: 0 40px;
+    }
+
+    @include smallMobile {
+        padding: 0 20px;
+    }
+}
+
+.innerContainer {
+    max-width: 1128px;
+    margin: auto;
+}
+
+
+///////////// Typography
+
+h1 {
+    font-family: $headerFont;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: $headerFont;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: $headerFont;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: $headerFont;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h5 {
+    font-family: $headerFont;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h6 {
+    font-family: $headerFont;
+    color: $bodyCopyColour;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+p {
+    font-family: $bodyFont;
+    font-size: 16px;
+    font-weight: 400;
+    color: $bodyCopyColour;
+}
+
+.bodyHeader {
+    font-family: $bodyFont;
+    font-size: 20px;
+    font-weight: 400;
+    color: $bodyCopyColour;
+}
+
+.header-12 {
+    font-family: $bodyFont;
+    font-size: 12px;
+    font-weight: 600;
+    color: $bodyCopyColour;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/////////////// Buttons
+.button-blk {
+    font-family: $headerFont;
+    color: $mainWhite;
+    font-size: 16px;
+    background-color: $mainBlack;
+    padding: 20px 40px;
+    border: 1.5px rgba(255,255,255,.5) solid;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    @include tablet {
+        padding: 15px 30px;
+    }
+}
+
+.button-blk:hover {
+    background-color: white;
+    color: black;
+    transition: 0.1s;
+}
+
+.button-wht {
+    font-family: $headerFont;
+    color: $mainBlack;
+    font-size: 16px;
+    background-color: $mainWhite;
+    padding: 20px 40px;
+    border: 1.5px rgba(0,0,0,.2) solid;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    @include tablet {
+        padding: 15px 30px;
+    }
+}
+
+.button-wht:hover {
+    background-color: black;
+    color: white;
+    transition: 0.1s;
+}
+
+.button-grey {
+    font-family: $headerFont;
+    color: $mainBlack;
+    font-size: 16px;
+    background-color: $backgroundGrey;
+    padding: 20px 40px;
+    border: 1.5px rgba(0,0,0,.2) solid;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    @include tablet {
+        padding: 15px 30px;
+    }
+}
+
+.button-grey:hover {
+    background-color: black;
+    color: white;
+    transition: 0.1s;
+}

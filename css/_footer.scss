@@ -1,0 +1,178 @@
+// CTA 
+
+.footerCTASection {
+    height: 640px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include tablet {
+        height: 1024px;
+        grid-template-columns: 1fr;
+    }
+
+    @include largeMobile {
+        height: 426px;
+        grid-template-columns: 1fr;
+
+        .footerCTA a h2 {
+            font-size: 30px;
+        }
+    }
+
+    @include smallMobile {
+        height: 426px;
+        grid-template-columns: 1fr;
+    }
+
+    .footerCTA {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+// Main Footer Area
+footer {
+    background-color: $mainBlack;
+    height: 822px;
+
+    @include standardLaptop {
+        padding: 0 80px;
+    }
+
+    @include tablet {
+        height: 734px;
+        padding: 0 40px;
+    }
+
+    @include largeMobile {
+        height: 1237px;
+        padding: 0 40px;
+    }
+
+    @include smallMobile {
+        padding: 0 20px;
+    }
+
+    .innerContainer {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        .footerHeader {
+            display: grid;
+            grid-template-columns: 4fr 1fr;;
+            margin-bottom: 170px;
+
+            @include tablet {
+                grid-template-columns: 2fr 1fr;;
+                margin-bottom: 100px;
+            }
+
+            @include largeMobile {
+                grid-template-columns: 1fr;;
+                margin-bottom: 70px;
+            }
+            
+            h4 {
+                color: white;
+                font-weight: 400;
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+                @include tablet {
+                    font-size: 25px;
+                }
+
+                @include largeMobile {
+                    font-size: 25px;
+                    text-align: center;
+                    margin-bottom: 80px;
+                }
+            }
+
+            .buttonWrapper {
+                text-align: right;
+
+                @include largeMobile {
+                    text-align: center;
+                }
+            }
+        }
+
+        .mainFooter {
+            display: grid;
+            grid-template-columns: 3fr 2fr 2fr 1fr;
+
+            @include standardLaptop {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 40px;
+            }
+
+            @include largeMobile {
+                grid-template-columns: 1fr;
+                text-align: center;
+
+                div {
+                    margin-bottom: 60px;
+                }
+            }
+
+            .header-12 {
+                color: $mainWhite;
+                margin-bottom: 30px;
+
+                @include largeMobile {
+                    margin-bottom: 15px;
+                }
+            }
+
+            p {
+                line-height: 27px;
+            }
+
+            div ul {
+                list-style-type: none;
+                color: $bodyCopyColour;
+                font-family: $bodyFont;
+                line-height: 27px;
+            }
+
+            .footerLink {
+                text-decoration: underline;
+                color: $bodyCopyColour;
+            }
+            
+            .footerLink:hover {
+                color: white;
+
+            }
+        }
+    }
+}
+
+.ourWorkCTA {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/freestocks-org-40k6ZqbsXuo-unsplash.jpg");
+}
+
+.theStudioCTA {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/room-3m9132_mMSQ-unsplash.jpg");
+}
